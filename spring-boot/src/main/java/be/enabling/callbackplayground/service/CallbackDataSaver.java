@@ -25,7 +25,7 @@ public class CallbackDataSaver {
     private final LinkedHashSet<CallbackDataDTO> callbackData = new LinkedHashSet<CallbackDataDTO>();
 
     @Autowired
-    private ActionTriggerer actionTrigerer;
+    private ActionTriggerer actionTriggerer;
 
     /**
      * Returns a list of all callback data in the order as it inserted into the
@@ -81,6 +81,6 @@ public class CallbackDataSaver {
 
     private void trigger(CallbackDataDTO callbackDataDTO) {
         LOG.debug("Triggering action for " + callbackDataDTO);
-        this.actionTrigerer.triggerAction(callbackDataDTO);
+        this.actionTriggerer.triggerAction(callbackDataDTO);
     }
 }
