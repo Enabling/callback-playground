@@ -10,10 +10,12 @@ The playground detects new callbacks being fired (after some time) and will trig
 
 The application contains a [Spring Boot](http://projects.spring.io/spring-boot/) application, which will start an embedded TomCat container in which the Spring application will run.
 
+By default, the application is available on http://localhost:8080
+
 Start the application with the following command:
 
 ```
-  mvn spring-boot:run
+  mvn clean spring-boot:run
 ```
 
 The application will start and load in all existing callback attempts. When a new callback is noticed, the action in ```be.enabling.callbackplayground.service.ActionTriggerer``` is triggered.
@@ -27,6 +29,7 @@ The application can be configured using a properties file (src/main/resources/ap
 The properties file contains the following:
 - `mockbin.id`: the mockbin id which will be used by the app to retrieve events from
 - `poll.periodInMs`: the time in milliseconds that the poller will wait before polling again
+- `server.port`: the port on which the application is accessible
 
 ## Dependencies
 
