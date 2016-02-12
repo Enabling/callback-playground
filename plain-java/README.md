@@ -13,7 +13,7 @@ The application contains a plain Java application.
 Start the application with the following command:
 
 ```
-  mvn exec:java
+  mvn clean package exec:java
 ```
 
 The application will start and load in all existing callback attempts. When a new callback is noticed, the action in ```be.enabling.callbackplayground.service.ActionTriggerer``` is triggered.
