@@ -17,7 +17,7 @@ The playground comes in the following flavours:
 
 See [enabling trigger documentation](http://docs.enabling.be/docs/trigger-api) for more information about trigger creation.
 
-Example curl (replace where necessary xxx with your mockbin id):
+Example curl (replace where necessary):
 
 ```
 curl -i -X POST -H "Authorization:Bearer xxxxx" -H "Accept:application/json" -H "Content-type:application/json" https://api.enabling.be/seaas/0.0.1/device/xxx/triggers/create/x -d '{"trigger":{"unit":"Celsius","conditionValueName":"temperature","conditionValueType":"int","condition":"temperature>23","callbackUrl":"http://mockbin.org/bin/xxxxx000000xxxxxxxx"}}'
